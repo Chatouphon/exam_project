@@ -37,6 +37,12 @@ app.use('/users', usersRouter);
 var user_levelRouter = require('./routes/user_level');
 app.use('/userlevel', user_levelRouter);
 
+var examsRouter = require('./routes/exams');
+app.use('/exam', examsRouter);
+
+var questionsRouter = require('./routes/questions');
+app.use('/question', questionsRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

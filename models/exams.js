@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const examSchema = new Schema({
+    user_id: String,
+    exam_name: String,
     full_score: Number,
     limit_time: Number,
     fee: Number,
