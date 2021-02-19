@@ -43,6 +43,9 @@ app.use('/exam', examsRouter);
 var questionsRouter = require('./routes/questions');
 app.use('/question', questionsRouter);
 
+var exam_historyRouter = require('./routes/exam_history');
+app.use('/history', exam_historyRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

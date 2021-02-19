@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
-const user_levelModel = require('./user_level')
 
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-    // user_level_id: user_levelModel.user_level_id,
+    user_level: String,
     user_name: String,
     password: String,
     first_name: String,
