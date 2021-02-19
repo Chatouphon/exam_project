@@ -33,7 +33,7 @@ router.put('/:question_id', async (req, res, next) => {
     req.body.exam_id = question.exam_id
     const payload = req.body
     const edited_question = await questionModel.findByIdAndUpdate(question_id, {$set:payload})
-    res.json({status: 200, payload: payload})
+    res.json({status: 200, edited: edited_question})
 })
 
 router.delete('/:question_id', async (req, res, next) => {

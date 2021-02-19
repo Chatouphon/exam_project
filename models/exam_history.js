@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
-const { modelName } = require('./user_level')
 
 const Schema = mongoose.Schema
 
 const exam_historySchema = new Schema({
+    user_id: String,
+    exam_id: String,
     exam_date: Date,
     exam_score: Number,
     created_at: { type: Date, default: null },
